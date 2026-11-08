@@ -11,11 +11,12 @@ Nhật ký lỗi: `data/app.log` (không chứa nội dung tài liệu/truy vấ
 
 ## Dòng lệnh (tùy chọn, cho dev)
 ```powershell
-python -m venv .venv; .\.venv\Scripts\pip install -r requirements.txt   # (dev: requirements-dev.txt)
+python -m venv .venv-local; .\.venv-local\Scripts\pip install -r requirements.txt   # (dev: requirements-dev.txt)
 python -m localrag verify-models | add-folder | index | ocr [--yes] | search "..." | serve
 python -m pytest -q
 python evals/run_eval.py          # golden set (cần model; OCR nếu đã cài Tesseract)
 ```
+Lưu ý: file `LocalRAG.vbs` luôn tạo/sửa `\.venv-local` riêng cho từng máy; nó không tái sử dụng `.venv` đã copy từ máy khác, vì bản đó thường trỏ đến Python cũ và có thể làm `onnxruntime` không cài được.
 Tesseract: dữ liệu ngôn ngữ ở `runtime/tessdata`; binary tìm theo `ocr.tesseract_path`, `runtime/tesseract`, PATH, rồi Program Files. Không commit binary/model vào Git.
 
 ## Hành vi chính
