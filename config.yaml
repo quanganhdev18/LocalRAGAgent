@@ -1,0 +1,73 @@
+language: vi
+privacy:
+  cloud_api_enabled: false
+  log_queries: false
+  telemetry_enabled: false      # chỉ bật khi người dùng chủ động đồng ý
+
+models:
+  root: ./models
+  manifest: ./models/MANIFEST.json
+  verify_on_start: true
+  allow_runtime_download: false
+  embedding_path: ./models/embeddings/multilingual-e5-small-onnx-int8
+
+paths:
+  data_dir: ./data
+  index_dir: ./indexes
+
+index:
+  embedding_model: intfloat/multilingual-e5-small
+  chunk_tokens: 350
+  chunk_overlap_tokens: 60
+  vector_dimensions: 384
+  batch_size: 16
+  max_seq_length: 512
+  onnx_threads: auto
+  max_file_mb: 200
+  max_pages: 2000
+  parse_timeout_seconds: 120
+  min_pdf_chars_per_page: 40     # dưới ngưỡng này, trang được coi là cần OCR
+  suspect_char_ratio: 0.30       # tỷ lệ ký tự lạ tối đa trước khi gắn text_suspect
+  reconcile_deleted: true
+  reconcile_grace_hours: 24
+  skip_cloud_placeholders: true
+  include_extensions: [docx, pdf, pptx]
+
+pptx:
+  include_notes: true
+  include_hidden_slides: true
+
+ocr:
+  enabled: true
+  engine: tesseract            # chốt sau spike; ghi vào docs/decisions.md
+  tesseract_path: ""           # trống = tìm trong runtime/tesseract rồi PATH
+  languages: [vie, eng]
+  render_dpi: 250
+  max_parallel: 1
+  max_pages_per_document: 300
+  timeout_seconds_per_page: 60
+  ask_before_bulk: true
+  min_confidence: 60           # dưới ngưỡng thì gắn ocr_low_quality; chỉnh theo spike
+  seconds_per_page_estimate: 6
+  priority: below_normal
+
+retrieval:
+  fusion: rrf
+  rrf_k: 60
+  mode: hybrid
+  top_k_candidates: 30
+  top_k_results: 10
+  max_chunks_per_document: 3
+  dedupe_cosine: 0.95
+  filter_before_topk: true
+
+local_ui:
+  bind: 127.0.0.1
+  port: 8700
+  allowed_hosts: [127.0.0.1, localhost]
+  cors_origins: []
+
+feedback:
+  enabled: true
+  endpoint: ""                  # điền khi có kênh thu phản hồi; để trống thì chỉ lưu cục bộ
+  collect_email_optional: true

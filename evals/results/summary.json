@@ -1,0 +1,82 @@
+{
+ "ocr_engine": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+ "index_seconds": 13.1,
+ "statuses": {
+  "encrypted": 1,
+  "indexed": 41
+ },
+ "metrics": {
+  "overall": 0.933,
+  "exact": 1.0,
+  "nodiacritic": 1.0,
+  "vi2en": 0.5,
+  "pptx": 1.0,
+  "ocr": 0.909,
+  "mrr": 0.843,
+  "p50_latency_s": 0.017,
+  "p95_latency_s": 0.024,
+  "none_queries": 8
+ },
+ "verdict": {
+  "overall": "PASS",
+  "exact": "PASS",
+  "nodiacritic": "PASS",
+  "vi2en": "FAIL",
+  "pptx": "PASS",
+  "ocr": "PASS",
+  "mrr": "PASS",
+  "p95_latency_s": "PASS"
+ },
+ "misses": [
+  {
+   "doc": "en03",
+   "type": "vi2en",
+   "query": "mạng nơ-ron đồ thị bị làm mịn quá mức",
+   "top": [
+    "pp03",
+    "pp01",
+    "pp02"
+   ]
+  },
+  {
+   "doc": "en06",
+   "type": "vi2en",
+   "query": "học liên kết bảo vệ quyền riêng tư",
+   "top": [
+    "vi01",
+    "pp07",
+    "vi09"
+   ]
+  },
+  {
+   "doc": "en09",
+   "type": "vi2en",
+   "query": "hệ vi sinh đường ruột và trầm cảm",
+   "top": [
+    "vi04",
+    "pp02",
+    "pp01"
+   ]
+  },
+  {
+   "doc": "en10",
+   "type": "vi2en",
+   "query": "học tăng cường từ phản hồi của con người",
+   "top": [
+    "pp07",
+    "vi03",
+    "vi12"
+   ]
+  },
+  {
+   "doc": "sc05",
+   "type": "vi2en",
+   "query": "đánh giá quá trình cải thiện động lực học toán",
+   "top": [
+    "vi03",
+    "pp07",
+    "vi09"
+   ]
+  }
+ ]
+}

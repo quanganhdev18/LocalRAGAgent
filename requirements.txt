@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-docx
+python-pptx
+pypdfium2
+Pillow
+onnxruntime
+tokenizers
+numpy
+huggingface_hub
+pyyaml
+httpx
+psutil
+pytest
+pydantic
+python-dateutil
+pywebview

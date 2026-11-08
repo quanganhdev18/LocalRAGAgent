@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "embedding-multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "path": "embeddings/multilingual-e5-small-onnx-int8",
+      "format": "onnx",
+      "quantization": "int8",
+      "size_bytes": 135431580,
+      "sha256": "7036f0557d60343175831e3a449995fc2fd0f4c2686edc565d49b99cc68e815b",
+      "files": [
+        {
+          "path": ".cache/huggingface/.gitignore",
+          "size": 1,
+          "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+        },
+        {
+          "path": ".cache/huggingface/CACHEDIR.TAG",
+          "size": 195,
+          "sha256": "e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f"
+        },
+        {
+          "path": ".cache/huggingface/download/onnx/config.json.metadata",
+          "size": 104,
+          "sha256": "d7ec7f451b8f7bc636a1cff68a43a1c0259f6300b228e19e7527e9f005a6ca4c"
+        },
+        {
+          "path": ".cache/huggingface/download/onnx/model_qint8_avx512_vnni.onnx.metadata",
+          "size": 128,
+          "sha256": "c4e063136acbfcc2aebb6170a545ab607f0a9aa170b0718215b47b582d8e567e"
+        },
+        {
+          "path": ".cache/huggingface/download/onnx/special_tokens_map.json.metadata",
+          "size": 104,
+          "sha256": "ac3aa1021f5d6d5450f1f64fb699073f5e2f00fcd95e2e7b110b8f633635444c"
+        },
+        {
+          "path": ".cache/huggingface/download/onnx/tokenizer.json.metadata",
+          "size": 128,
+          "sha256": "8bca750979df62e0a3366d7c9aa6888ecc7fa9d7536c9c7d8789b1adceb0cfde"
+        },
+        {
+          "path": ".cache/huggingface/download/onnx/tokenizer_config.json.metadata",
+          "size": 103,
+          "sha256": "f71a8269db954f8ff25ff40ccd399948d6144f44fb6aba24d55c30bb14acbc9f"
+        },
+        {
+          "path": "onnx/config.json",
+          "size": 653,
+          "sha256": "bbb7c1333fc4b3e27fbc9cd5d2070aabcc1d4dfb99917c3633e772f97545a6b6"
+        },
+        {
+          "path": "onnx/model_qint8_avx512_vnni.onnx",
+          "size": 118346824,
+          "sha256": "dd476dd0c2514e9b9be83aeb3853fac0763e0bdf4a71645407587d77c48a2d88"
+        },
+        {
+          "path": "onnx/special_tokens_map.json",
+          "size": 167,
+          "sha256": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7"
+        },
+        {
+          "path": "onnx/tokenizer.json",
+          "size": 17082730,
+          "sha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39"
+        },
+        {
+          "path": "onnx/tokenizer_config.json",
+          "size": 443,
+          "sha256": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+        }
+      ],
+      "source": "https://huggingface.co/intfloat/multilingual-e5-small/tree/614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "license": "MIT",
+      "prepared_at": "2026-11-07T16:33:59"
+    }
+  ]
+}

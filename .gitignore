@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+# Data, indexes, logs (never commit real data)
+data/
+indexes/
+*.db
+*.sqlite*
+*.log
+# Models, binaries, builds, downloads
+models/*
+!models/MANIFEST.json
+!models/LICENSES/
+runtime/
+_downloads/
+dist/
+build/
+*.onnx
+*.gguf
+*.traineddata
+*.exe
+# Generated eval corpus (keep only the small summaries)
+evals/_generated/
+evals/results/*
+!evals/results/summary.md
+!evals/results/summary.json

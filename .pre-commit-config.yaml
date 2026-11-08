@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: forbidden-files
+        name: no models/binaries/data/index/db
+        entry: python scripts/check_forbidden_files.py
+        language: system
+        pass_filenames: false
+        always_run: true
