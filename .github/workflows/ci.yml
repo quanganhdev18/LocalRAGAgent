@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install -r requirements.txt
+      - run: pip install -r requirements-dev.txt
       - run: python scripts/check_forbidden_files.py
       - run: pip install pip-licenses && pip-licenses --format=markdown --fail-on="GNU Affero General Public License v3 (AGPLv3);GNU General Public License v3 (GPLv3)"
       # Tests that need the embedding model are skipped in CI unless the model is provisioned.

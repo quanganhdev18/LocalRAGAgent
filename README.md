@@ -11,7 +11,7 @@ Nhật ký lỗi: `data/app.log` (không chứa nội dung tài liệu/truy vấ
 
 ## Dòng lệnh (tùy chọn, cho dev)
 ```powershell
-python -m venv .venv; .\.venv\Scripts\pip install -r requirements.txt
+python -m venv .venv; .\.venv\Scripts\pip install -r requirements.txt   # (dev: requirements-dev.txt)
 python -m localrag verify-models | add-folder | index | ocr [--yes] | search "..." | serve
 python -m pytest -q
 python evals/run_eval.py          # golden set (cần model; OCR nếu đã cài Tesseract)

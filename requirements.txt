@@ -11,7 +11,5 @@ huggingface_hub
 pyyaml
 httpx
 psutil
-pytest
 pydantic
-python-dateutil
 pywebview

@@ -127,7 +127,7 @@ def cmd_package(a):
             sys.exit("Không thể đóng gói full/offline:\n" + "\n".join(f" - {r.id}: {r.problem}" for r in bad))
     out = PROJECT_ROOT / "dist" / f"localrag-{mode}.zip"
     out.parent.mkdir(exist_ok=True)
-    skip_dirs = {".venv", "__pycache__", "data", "indexes", "dist", ".git", ".pytest_cache", "_downloads"}
+    skip_dirs = {".venv", ".venv-local", "runtime", "__pycache__", "data", "indexes", "dist", ".git", ".pytest_cache", "_downloads"}
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         for p in PROJECT_ROOT.rglob("*"):
             rel = p.relative_to(PROJECT_ROOT)
